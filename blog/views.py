@@ -11,4 +11,7 @@ def post_list(request):
 def post_detail(request, pk):
 	Post.objects.get(pk=pk)
 	posts = get_object_or_404(Post, pk=pk)
-	return render (request, 'blog/post_detail.html', {'posts': posts})
+	template =('blog/post_detail.html')
+	data ={'post': posts, 'teguh': "teguh"}
+	print( data['post'] )
+	return render (request,template , data)

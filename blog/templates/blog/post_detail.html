@@ -1,13 +1,17 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+<div class="row">
+	<div class="col-md-12">
     <div class="post">
         {% if post.published_date %}
-            <div class="date">
+            <div class="date" style="float : right">
                 {{ post.published_date }}
             </div>
         {% endif %}
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
+	</div>
+	</div>
 {% endblock %}
